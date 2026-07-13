@@ -3,3 +3,5 @@ dist
 .env
 converge
 *.log
+.commandcode
+/src/generated/prisma
