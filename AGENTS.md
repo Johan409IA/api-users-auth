@@ -45,5 +45,12 @@ No toques esto sin mi confirmacion
 
 ## Herramientas
 - Usa la CLI de context7 para que busques documentacion actualizada y moderna para que se aplique buenas practicas en el codigo. Usa la skill de `find-docs` que esta a nivel de usuario global para que obtengas documentación oficial y actualizada de tecnologías de desarrollo. Y consulta el `AGENTS.md` que tienes en tu configuracion en `C:\Users\Johan Castillon\.commandcode` para que sepas como usar las herramientas disponibles.
+- Usa estos ejemplos de busqueda con el comando `ctx7`:
+  - ctx7 library react "How to clean up useEffect with async operations"
+  - ctx7 library nextjs "How to set up app router with middleware"
+  - ctx7 library prisma "How to define one-to-many relations with cascade delete"
+- No uses `npx ctx7` para buscar documentacion, por ejemplo: `npx ctx7@latest docs /prisma/prisma/7.5.0 "prisma-client driver adapter pg postgresql"]`, usa `ctx7` directamente en la terminal, asi evitas errores.
 - Si por algun motivo no llegas a encontrar la informacion que necesitas, consulta la documentacion oficial de la tecnologia que estés utilizando, por ejemplo si es express.js, consulta la documentacion oficial de express.js [https://expressjs.com/](Express.js)
 
+## REGLAS GENERALES
+- Revisa primero el AGENTS.md para que tengas contexto del proyecto y sepas de sus reglas.
