@@ -17,5 +17,8 @@
       "semicolons": "always",
       "trailingCommas": "all"
     }
+  },
+  "files": {
+    "includes": ["src/**/*.ts", "!src/generated/**", "!node_modules/**"]
   }
 }

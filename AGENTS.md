@@ -54,3 +54,4 @@ No toques esto sin mi confirmacion
 
 ## REGLAS GENERALES
 - Revisa primero el AGENTS.md para que tengas contexto del proyecto y sepas de sus reglas.
+- Tomar en cuenta la version de la tecnologia usada, para la generacion del codigo y asi evitar sintaxis deprecada

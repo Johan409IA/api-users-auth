@@ -18,8 +18,8 @@ const resultado = esquemaVariablesEntorno.safeParse(process.env);
 if (!resultado.success) {
   console.error('Variables de entorno inválidas:');
   resultado.error.issues.forEach((issue) => {
-    console.log(`${issue.path.join('.')}: ${issue.message}`)
-  })
+    console.log(`${issue.path.join('.')}: ${issue.message}`);
+  });
   process.exit(1);
 }
 
