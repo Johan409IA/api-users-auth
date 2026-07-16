@@ -10,13 +10,24 @@ import { AppError, ErrorDeValidacion } from '../errors/error';
 // El cuarto parámetro `next` es obligatorio para que Express lo reconozca como error handler.
 export function manejadorDeErrores(
   error: unknown,
-  _req: Request,
+  req: Request,
   res: Response,
   _next: NextFunction,
 ): void {
+  // Contexto de la request para trazabilidad en logs.
+  const contexto = {
+    requestId: req.id,
+    metodo: req.method,
+    url: req.url,
+    usuarioId: req.user?.id,
+    rol: req.user?.rol,
+    ip: req.ip,
+    body: req.body,
+  };
+
   if (error instanceof ZodError) {
     const validacion = new ErrorDeValidacion('Datos de entrada inválidos', error.issues);
-    logger.warn({ detalles: validacion.detalles }, validacion.message);
+    logger.warn({ ...contexto, detalles: validacion.detalles }, validacion.message);
     res.status(validacion.statusCode).json({
       error: { mensaje: validacion.message, detalles: validacion.detalles },
     });
@@ -25,9 +36,15 @@ export function manejadorDeErrores(
 
   if (error instanceof AppError) {
     if (error.esOperacional) {
-      logger.warn({ mensaje: error.message, detalles: error.detalles }, 'Error operacional');
+      logger.warn(
+        { ...contexto, mensaje: error.message, detalles: error.detalles },
+        'Error operacional',
+      );
     } else {
-      logger.error({ mensaje: error.message, stack: error.stack }, 'Error de aplicación');
+      logger.error(
+        { ...contexto, mensaje: error.message, stack: error.stack },
+        'Error de aplicación',
+      );
     }
     res.status(error.statusCode).json({
       error: { mensaje: error.message, ...(error.detalles ? { detalles: error.detalles } : {}) },
@@ -37,7 +54,7 @@ export function manejadorDeErrores(
 
   const mensaje = error instanceof Error ? error.message : 'Error interno del servidor';
   const stack = error instanceof Error ? error.stack : undefined;
-  logger.error({ mensaje, stack }, 'Error no controlado');
+  logger.error({ ...contexto, mensaje, stack }, 'Error no controlado');
   res.status(500).json({
     error: {
       mensaje: 'Error interno del servidor',

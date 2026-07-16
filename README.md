@@ -120,10 +120,12 @@ src/
 │   │   ├── auth.middleware.ts
 │   │   ├── error-handler.ts
 │   │   ├── not-found.ts
+│   │   ├── rate-limit.ts
 │   │   └── validate-schema.ts
 │   ├── types/
 │   │   └── express.d.ts
 │   └── utils/
+│       ├── auditoria.ts
 │       ├── hash.ts
 │       └── jwt.ts
 └── modules/
@@ -285,7 +287,7 @@ enum UserRole {
 
 - El token JWT se entrega en la cabecera `Authorization: Bearer <token>`.
 - El registro público siempre crea usuarios con rol `USER`. La elevación a `ADMIN` se realiza mediante `PATCH /api/users/:id`.
-- Existe un guard de roles `requiereRol(...)` disponible en `auth.middleware.ts`, pero no se aplica por defecto a las rutas de `/users`. Se cablea según las reglas de autorización que se definan.
+- Todas las rutas de `/api/users` requieren autenticación y rol `ADMIN`.
 - Login responde con el mismo mensaje para email inexistente, cuenta inactiva o contraseña incorrecta (evita enumeración de usuarios).
 
 ## Users
@@ -349,24 +351,32 @@ Ejemplo:
 
 # Seguridad
 
-- Helmet
-- CORS
-- Hash de contraseñas con bcrypt
-- JWT
-- Validación con Zod
-- Variables de entorno
+- Helmet con configuración explícita (CSP desactivada para API JSON, HSTS en producción, referrer policy estricto)
+- CORS configurado por variable de entorno
+- Hash de contraseñas con bcrypt (10 rondas)
+- JWT con payload mínimo (sub, rol)
+- Validación exhaustiva con Zod (schemas strict, refinos de contraseña)
+- Rate limiting (200 req/15min global, 10 req/15min en auth)
+- Límite de body a 10kb para mitigar DoS
+- Redacción de datos sensibles en logs (passwords, tokens, headers de autenticación)
+- Request ID para trazabilidad (header X-Request-Id)
+- Variables de entorno validadas con Zod
+- Autorización por roles (ADMIN-only para /api/users)
+- Logs de eventos de seguridad (login success/fail, tokens inválidos, auditoría CRUD)
 
 ---
 
 # Logging
 
-Se utiliza **Pino**.
+Se utiliza **Pino** con configuración avanzada:
 
-Permite:
-
-- Registrar requests.
-- Detectar errores.
-- Monitorear la aplicación en producción.
+- Redacción automática de datos sensibles (passwords, tokens, cabeceras de autenticación)
+- Request ID para correlación de logs
+- Contexto de request en logs de error (method, URL, userId, IP, body)
+- Eventos de seguridad: login success/fail, tokens inválidos/expirados
+- Auditoría de operaciones CRUD en usuarios
+- Flush de logger en shutdown para no perder logs pendientes
+- Niveles configurables por entorno (info en producción, debug en desarrollo)
 
 ---
 
@@ -494,8 +504,8 @@ LOG_LEVEL=info
 - Refresh Tokens
 - Recuperación de contraseña
 - Verificación por email
-- Rate Limiting
 - CI/CD
+- Rate limiting
 - OpenAPI / Swagger
 - Observabilidad
 - Seed de administrador

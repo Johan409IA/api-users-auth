@@ -68,6 +68,18 @@ export async function actualizarUsuario(
     }
   }
 
+  // Defensa en profundidad: validar que la nueva contraseña no contenga
+  // el email o nombre actuales del usuario (cuando no se envían en el body).
+  if (entrada.password) {
+    const passwordLower = entrada.password.toLowerCase();
+    if (
+      passwordLower.includes(usuarioActual.email.toLowerCase()) ||
+      passwordLower.includes(usuarioActual.name.toLowerCase())
+    ) {
+      throw new ErrorDeValidacion('La contraseña no puede contener el email ni el nombre');
+    }
+  }
+
   const passwordHasheado = entrada.password ? await hashear(entrada.password) : undefined;
 
   try {

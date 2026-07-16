@@ -1,4 +1,5 @@
 import type { NextFunction, Request, RequestHandler, Response } from 'express';
+import { JsonWebTokenError, TokenExpiredError } from 'jsonwebtoken';
 import type { UserModel } from '../../generated/prisma/models/User';
 import type { UsuarioAutenticado } from '../../modules/auth/auth.types';
 import { ErrorNoAutorizadoError, ErrorProhibidoError } from '../errors/error';
@@ -17,7 +18,18 @@ export const autenticar: RequestHandler = (req: Request, _res: Response, next: N
     const carga = verificarToken(token);
     req.user = { id: carga.sub, rol: carga.rol } satisfies UsuarioAutenticado;
     next();
-  } catch {
+  } catch (error) {
+    // Loggear evento de seguridad: token inválido o expirado.
+    const razon =
+      error instanceof TokenExpiredError
+        ? 'TOKEN_EXPIRADO'
+        : error instanceof JsonWebTokenError
+          ? 'TOKEN_INVALIDO'
+          : 'ERROR_VERIFICACION';
+    req.log.warn(
+      { evento: 'seguridad', tipo: 'token_invalido', razon, ip: req.ip },
+      'Token inválido o expirado',
+    );
     next(new ErrorNoAutorizadoError('Token inválido o expirado'));
   }
 };

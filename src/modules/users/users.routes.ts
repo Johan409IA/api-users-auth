@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { autenticar, requiereRol } from '../../shared/middlewares/auth.middleware';
 import { validar } from '../../shared/middlewares/validate-schema';
 import * as controladorUsuarios from './users.controller';
 import {
@@ -8,6 +9,9 @@ import {
 } from './users.schema';
 
 export const enrutadorUsuarios = Router();
+
+// Todo el módulo de usuarios queda restringido a ADMIN.
+enrutadorUsuarios.use(autenticar, requiereRol('ADMIN'));
 
 enrutadorUsuarios.post('/', validar(crearUsuarioSchema, 'body'), controladorUsuarios.crearUsuario);
 enrutadorUsuarios.get('/', controladorUsuarios.listarUsuarios);

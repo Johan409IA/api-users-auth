@@ -21,6 +21,16 @@ async function iniciarServidor(): Promise<void> {
     logger.info(`Señal ${señal} recibida. Cerrando servidor...`);
     servidor.close(async () => {
       await prisma.$disconnect();
+      // Flush del logger para no perder logs pendientes antes de salir.
+      await new Promise<void>((resolve, reject) => {
+        logger.flush((error?: Error) => {
+          if (error) {
+            reject(error);
+            return;
+          }
+          resolve();
+        });
+      });
       process.exit(0);
     });
   };
