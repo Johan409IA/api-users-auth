@@ -45,3 +45,11 @@ export class ErrorNoAutorizadoError extends AppError {
     super(mensaje, 401);
   }
 }
+
+// 403: el usuario está autenticado pero no tiene el rol necesario para el recurso.
+// Distinto de 401 (no autenticado) según semántica HTTP estándar.
+export class ErrorProhibidoError extends AppError {
+  constructor(mensaje: string) {
+    super(mensaje, 403);
+  }
+}

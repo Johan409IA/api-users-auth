@@ -3,6 +3,7 @@ import {
   ErrorDeValidacion,
   RecursoNoEncontradoError,
 } from '../../shared/errors/error';
+import { mapearAUsuarioDto } from '../../shared/mappers/usuario.mapper';
 import { hashear } from '../../shared/utils/hash';
 import * as repositorioUsuarios from './users.repository';
 import type {
@@ -14,14 +15,9 @@ import type { UsuarioDto } from './users.types';
 
 const REGEX_UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
-function sanitizarAUsuarioDto<T extends Record<string, unknown>>(usuario: T): UsuarioDto {
-  const { password: _omitir, ...resto } = usuario;
-  return resto as unknown as UsuarioDto;
-}
-
 export async function listarUsuarios(): Promise<UsuarioDto[]> {
   const usuarios = await repositorioUsuarios.obtenerTodos();
-  return usuarios.map(sanitizarAUsuarioDto);
+  return usuarios.map(mapearAUsuarioDto);
 }
 
 export async function obtenerUsuarioPorId(entrada: ObtenerUsuarioPorIdInput): Promise<UsuarioDto> {
@@ -34,7 +30,7 @@ export async function obtenerUsuarioPorId(entrada: ObtenerUsuarioPorIdInput): Pr
   if (!usuario) {
     throw new RecursoNoEncontradoError('Usuario no encontrado');
   }
-  return sanitizarAUsuarioDto(usuario);
+  return mapearAUsuarioDto(usuario);
 }
 
 export async function crearUsuario(entrada: CrearUsuarioInput): Promise<UsuarioDto> {
@@ -49,7 +45,7 @@ export async function crearUsuario(entrada: CrearUsuarioInput): Promise<UsuarioD
     password: passwordHasheado,
     rol: entrada.rol,
   });
-  return sanitizarAUsuarioDto(usuario);
+  return mapearAUsuarioDto(usuario);
 }
 
 export async function actualizarUsuario(
@@ -82,7 +78,7 @@ export async function actualizarUsuario(
       ...(entrada.rol !== undefined && { rol: entrada.rol }),
       ...(entrada.isActive !== undefined && { isActive: entrada.isActive }),
     });
-    return sanitizarAUsuarioDto(usuario);
+    return mapearAUsuarioDto(usuario);
   } catch (error) {
     // Carrera: el registro se borró entre el GET previo y el UPDATE.
     if (typeof error === 'object' && error !== null && 'code' in error && error.code === 'P2025') {
@@ -98,7 +94,7 @@ export async function eliminarUsuario(entrada: ObtenerUsuarioPorIdInput): Promis
   }
   try {
     const usuario = await repositorioUsuarios.eliminar(entrada.id);
-    return sanitizarAUsuarioDto(usuario);
+    return mapearAUsuarioDto(usuario);
   } catch (error) {
     // Prisma lanza P2025 cuando el registro no existe para update/delete.
     if (typeof error === 'object' && error !== null && 'code' in error && error.code === 'P2025') {

@@ -11,6 +11,13 @@ const esquemaVariablesEntorno = z.object({
     .transform((valor) => Number.parseInt(valor, 10))
     .pipe(z.number().int().positive()),
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
+  // JWT_SECRET con longitud mínima para evitar secretos débiles que faciliten
+  // el brute-force de la firma del token.
+  JWT_SECRET: z.string().min(32, 'JWT_SECRET debe tener al menos 32 caracteres'),
+  // jsonwebtoken acepta formatos legibles como '1d', '8h', '3600s'.
+  // Se pasa directo a jwt.sign sin parsear a segundos.
+  JWT_EXPIRES_IN: z.string().min(1).default('1d'),
+  CORS_ORIGIN: z.string().min(1, 'CORS_ORIGIN es obligatorio'),
 });
 
 const resultado = esquemaVariablesEntorno.safeParse(process.env);

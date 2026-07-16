@@ -55,3 +55,5 @@ No toques esto sin mi confirmacion
 ## REGLAS GENERALES
 - Revisa primero el AGENTS.md para que tengas contexto del proyecto y sepas de sus reglas.
 - Tomar en cuenta la version de la tecnologia usada, para la generacion del codigo y asi evitar sintaxis deprecada
+- Respetar la estructura de carpetas y archivos del proyecto segun el `README.md`. Si es que hay algun archivo que se quiere crear, que difiere al de la estructura, mencionar porque la quieres añadir y si es correcto y aprobado lo agregas y actualizar el la estructura de carpetas y archivos del proyecto en el `README.md`.
+- Aplicar el linter, formatear y type check de typescript, si es que esta disponible, antes de confirmar que se aplicaron bien cualquier cambio

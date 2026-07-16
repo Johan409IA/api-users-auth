@@ -112,29 +112,36 @@ src/
 │   └── logger.ts
 ├── shared/
 │   ├── errors/
-│   │   └── app-error.ts
+│   │   └── error.ts
+│   ├── mappers/
+│   │   └── usuario.mapper.ts
 │   ├── middlewares/
+│   │   ├── async-handler.ts
 │   │   ├── auth.middleware.ts
 │   │   ├── error-handler.ts
 │   │   ├── not-found.ts
-│   │   └── validate.middleware.ts
+│   │   └── validate-schema.ts
 │   ├── types/
 │   │   └── express.d.ts
 │   └── utils/
+│       ├── hash.ts
+│       └── jwt.ts
 └── modules/
     ├── auth/
     │   ├── auth.controller.ts
     │   ├── auth.routes.ts
     │   ├── auth.schema.ts
-    │   └── auth.service.ts
+    │   ├── auth.service.ts
+    │   ├── auth.types.ts
+    │   └── index.ts
     └── users/
-        ├── user.controller.ts
-        ├── user.mapper.ts
-        ├── user.repository.ts
-        ├── user.routes.ts
-        ├── user.schema.ts
-        └── user.service.ts
-
+        ├── index.ts
+        ├── users.controller.ts
+        ├── users.repository.ts
+        ├── users.routes.ts
+        ├── users.schema.ts
+        ├── users.service.ts
+        └── users.types.ts
 prisma/
 ├── schema.prisma
 └── migrations/
@@ -273,6 +280,13 @@ enum UserRole {
 | POST | `/api/auth/register` | Registrar usuario |
 | POST | `/api/auth/login` | Iniciar sesión |
 | GET | `/api/auth/me` | Obtener usuario autenticado |
+
+### Reglas de autenticación
+
+- El token JWT se entrega en la cabecera `Authorization: Bearer <token>`.
+- El registro público siempre crea usuarios con rol `USER`. La elevación a `ADMIN` se realiza mediante `PATCH /api/users/:id`.
+- Existe un guard de roles `requiereRol(...)` disponible en `auth.middleware.ts`, pero no se aplica por defecto a las rutas de `/users`. Se cablea según las reglas de autorización que se definan.
+- Login responde con el mismo mensaje para email inexistente, cuenta inactiva o contraseña incorrecta (evita enumeración de usuarios).
 
 ## Users
 

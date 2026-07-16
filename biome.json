@@ -19,6 +19,6 @@
     }
   },
   "files": {
-    "includes": ["src/**/*.ts", "!src/generated/**", "!node_modules/**"]
+    "includes": ["src/**/*.ts", "!src/generated", "!node_modules"]
   }
 }
