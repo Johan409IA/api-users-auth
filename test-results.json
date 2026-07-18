@@ -1,0 +1,3268 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.10 [39m[90mD:/Codigo/Proyectos/api-users-render[39m
+
+Datasource "db": PostgreSQL database "users_api_test", schema "public" at "localhost:5433"
+
+1 migration found in prisma/migrations
+
+
+No pending migrations to apply.
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 1
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/register"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "name": "Otro",
+      "email": "existe@example.com",
+      "password": "[REDACTED]"
+    }
+    [35mmensaje[39m: "El email ya está registrado"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 1,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56408",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "66",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56409
+    }
+    [35mrequestId[39m: 1
+    [35mres[39m: {
+      "statusCode": 409,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 1,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "9",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "52",
+        "etag": "W/\"34-uknFdgrCIrP1GSfbuCBsI3NgSkQ\""
+      }
+    }
+    [35mresponseTime[39m: 27
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 2
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/register"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "name": "Falta email y password"
+    }
+    [35mmensaje[39m: "Datos de entrada inválidos"
+    [35mdetalles[39m: [
+      {
+        "expected": "string",
+        "code": "invalid_type",
+        "path": [
+          "email"
+        ],
+        "message": "Invalid input: expected string, received undefined"
+      },
+      {
+        "expected": "string",
+        "code": "invalid_type",
+        "path": [
+          "password"
+        ],
+        "message": "Invalid input: expected string, received undefined"
+      }
+    ]
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 2,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56410",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "33",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56411
+    }
+    [35mrequestId[39m: 2
+    [35mres[39m: {
+      "statusCode": 400,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 2,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "8",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "315",
+        "etag": "W/\"13b-I25h6qFiztZ68Gsm/HYE7JCFv+Q\""
+      }
+    }
+    [35mresponseTime[39m: 2
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 3
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/register"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "name": "Test",
+      "email": "test@test.com",
+      "password": "[REDACTED]"
+    }
+    [35mmensaje[39m: "Datos de entrada inválidos"
+    [35mdetalles[39m: [
+      {
+        "origin": "string",
+        "code": "invalid_format",
+        "format": "regex",
+        "pattern": "/[A-Z]/",
+        "path": [
+          "password"
+        ],
+        "message": "Debe incluir al menos una mayúscula"
+      }
+    ]
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 3,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56414",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "61",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56415
+    }
+    [35mrequestId[39m: 3
+    [35mres[39m: {
+      "statusCode": 400,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 3,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "7",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "214",
+        "etag": "W/\"d6-TaNygyqAA75Jpfi8sA5TK2e1cpk\""
+      }
+    }
+    [35mresponseTime[39m: 2
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 4
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/register"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "name": "Test",
+      "email": "test@test.com",
+      "password": "[REDACTED]"
+    }
+    [35mmensaje[39m: "Datos de entrada inválidos"
+    [35mdetalles[39m: [
+      {
+        "origin": "string",
+        "code": "invalid_format",
+        "format": "regex",
+        "pattern": "/[^A-Za-z0-9]/",
+        "path": [
+          "password"
+        ],
+        "message": "Debe incluir al menos un símbolo"
+      }
+    ]
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 4,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56416",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "61",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56417
+    }
+    [35mrequestId[39m: 4
+    [35mres[39m: {
+      "statusCode": 400,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 4,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "6",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "218",
+        "etag": "W/\"da-lo9E7GwBZzdcm9Pq8bqCHVynDPE\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 5
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/register"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "name": "Test",
+      "email": "test@test.com",
+      "password": "[REDACTED]"
+    }
+    [35mmensaje[39m: "Datos de entrada inválidos"
+    [35mdetalles[39m: [
+      {
+        "origin": "string",
+        "code": "invalid_format",
+        "format": "regex",
+        "pattern": "/\d/",
+        "path": [
+          "password"
+        ],
+        "message": "Debe incluir al menos un número"
+      }
+    ]
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 5,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56418",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "61",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56419
+    }
+    [35mrequestId[39m: 5
+    [35mres[39m: {
+      "statusCode": 400,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 5,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "5",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "208",
+        "etag": "W/\"d0-d24LDkfi04Ay2PaJjyYIayeYBl8\""
+      }
+    }
+    [35mresponseTime[39m: 2
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 6
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/register"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "name": "Test",
+      "email": "test@test.com",
+      "password": "[REDACTED]"
+    }
+    [35mmensaje[39m: "Datos de entrada inválidos"
+    [35mdetalles[39m: [
+      {
+        "origin": "string",
+        "code": "too_small",
+        "minimum": 8,
+        "inclusive": true,
+        "path": [
+          "password"
+        ],
+        "message": "Mínimo 8 caracteres"
+      }
+    ]
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 6,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56420",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "57",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56421
+    }
+    [35mrequestId[39m: 6
+    [35mres[39m: {
+      "statusCode": 400,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 6,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "4",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "185",
+        "etag": "W/\"b9-Oh76rH/ZHNd8yxVaCk6txxD8fNY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 7
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/register"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "name": "Test",
+      "email": "mi.email@test.com",
+      "password": "[REDACTED]"
+    }
+    [35mmensaje[39m: "Datos de entrada inválidos"
+    [35mdetalles[39m: [
+      {
+        "code": "custom",
+        "message": "La contraseña no puede contener el email",
+        "path": [
+          "password"
+        ]
+      },
+      {
+        "code": "custom",
+        "message": "La contraseña no puede contener el nombre",
+        "path": [
+          "password"
+        ]
+      }
+    ]
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 7,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56422",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "75",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56423
+    }
+    [35mrequestId[39m: 7
+    [35mres[39m: {
+      "statusCode": 400,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 7,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "3",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "249",
+        "etag": "W/\"f9-XiQEPZiu4jESE/zHZd6IsbB9+Co\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 8
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/register"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "name": "Juan Carlos",
+      "email": "test@test.com",
+      "password": "[REDACTED]"
+    }
+    [35mmensaje[39m: "Datos de entrada inválidos"
+    [35mdetalles[39m: [
+      {
+        "code": "custom",
+        "message": "La contraseña no puede contener el nombre",
+        "path": [
+          "password"
+        ]
+      }
+    ]
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 8,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56424",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "73",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56425
+    }
+    [35mrequestId[39m: 8
+    [35mres[39m: {
+      "statusCode": 400,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 8,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "2",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "157",
+        "etag": "W/\"9d-bd31nmD+M5SEcnPfzsFaJcAggls\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 9
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/register"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "name": "Test",
+      "email": "test@test.com",
+      "password": "[REDACTED]",
+      "campoInesperado": "valor"
+    }
+    [35mmensaje[39m: "Datos de entrada inválidos"
+    [35mdetalles[39m: [
+      {
+        "code": "unrecognized_keys",
+        "keys": [
+          "campoInesperado"
+        ],
+        "path": [],
+        "message": "Unrecognized key: \"campoInesperado\""
+      }
+    ]
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 9,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56426",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "87",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56427
+    }
+    [35mrequestId[39m: 9
+    [35mres[39m: {
+      "statusCode": 400,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 9,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "1",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "180",
+        "etag": "W/\"b4-cQsvnIW2i1vN9A3d/XLJQVwxgqI\""
+      }
+    }
+    [35mresponseTime[39m: 6
+[18:54:46] [32mINFO[39m (api-users-render): [36mRegistro exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 1,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56403",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56404
+    }
+    [35mrequestId[39m: 1
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "registro"
+    [35musuarioId[39m: "cec46f19-0c49-4e4f-bfd1-267d94001be0"
+    [35memail[39m: "test-1784246086142@example.com"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 1,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56403",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56404
+    }
+    [35mrequestId[39m: 1
+    [35mres[39m: {
+      "statusCode": 201,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 1,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "9",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "450",
+        "etag": "W/\"1c2-/Latu5xzAKkvxmoFbJr75Ku5hwQ\""
+      }
+    }
+    [35mresponseTime[39m: 182
+[18:54:46] [31mERROR[39m (api-users-render): [36mError de Prisma[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mprisma[39m: {
+      "message": "\nInvalid `prisma.user.update()` invocation in\nD:/Codigo/Proyectos/api-users-render/tests/helpers/auth.ts:35:21\n\n  32 \n  33 export async function crearAdminYObtenerToken(app: Application): Promise<AuthResult> {\n  34   const res = await registrarYObtenerToken(app);\n→ 35   await prisma.user.update(\nAn operation failed because it depends on one or more records that were required but not found. No record was found for an update.",
+      "target": "user.update",
+      "timestamp": "2026-07-16T23:54:46.490Z"
+    }
+[18:54:46] [32mINFO[39m (api-users-render): [36mRegistro exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 2,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56412",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56413
+    }
+    [35mrequestId[39m: 2
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "registro"
+    [35musuarioId[39m: "7e8264cd-a085-4b08-971e-6b556236a2af"
+    [35memail[39m: "test-1784246086494@example.com"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 2,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56412",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56413
+    }
+    [35mrequestId[39m: 2
+    [35mres[39m: {
+      "statusCode": 201,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 2,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "8",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "450",
+        "etag": "W/\"1c2-320YU0SJb2W+fFfBx+tGaIC1F1g\""
+      }
+    }
+    [35mresponseTime[39m: 124
+[18:54:46] [32mINFO[39m (api-users-render): [36mRegistro exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 3,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56428",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "80",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56429
+    }
+    [35mrequestId[39m: 3
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "registro"
+    [35musuarioId[39m: "1a51ac58-dbf5-44a5-a280-bb0d4f1982b5"
+    [35memail[39m: "usuario-normal@example.com"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 3,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56428",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "80",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56429
+    }
+    [35mrequestId[39m: 3
+    [35mres[39m: {
+      "statusCode": 201,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 3,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "7",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "446",
+        "etag": "W/\"1be-EX2ugq8c+iIeeOSmNolLJRerf0A\""
+      }
+    }
+    [35mresponseTime[39m: 110
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 4
+    [35mmetodo[39m: "GET"
+    [35murl[39m: "/api/users"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mmensaje[39m: "Token de autenticación no proporcionado"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 4,
+      "method": "GET",
+      "url": "/api/users",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56432",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56433
+    }
+    [35mrequestId[39m: 4
+    [35mres[39m: {
+      "statusCode": 401,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 4,
+        "ratelimit-policy": "200;w=900",
+        "ratelimit-limit": "200",
+        "ratelimit-remaining": "196",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "64",
+        "etag": "W/\"40-95kLUDsQIl/EPvKMrotj7AJwWuY\""
+      }
+    }
+    [35mresponseTime[39m: 2
+[18:54:46] [32mINFO[39m (api-users-render): [36mLogin exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 1,
+      "method": "POST",
+      "url": "/api/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56406",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "51",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56407
+    }
+    [35mrequestId[39m: 1
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "login_success"
+    [35musuarioId[39m: "6ddad27f-fb81-4aa1-b131-517868f9f1d0"
+    [35memail[39m: "login@example.com"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 1,
+      "method": "POST",
+      "url": "/api/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56406",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "51",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56407
+    }
+    [35mrequestId[39m: 1
+    [35mres[39m: {
+      "statusCode": 200,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 1,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "9",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "438",
+        "etag": "W/\"1b6-RnZ0S+pfhIZ1swfI8zGz4n4H1Lc\""
+      }
+    }
+    [35mresponseTime[39m: 158
+[18:54:46] [33mWARN[39m (api-users-render): [36mLogin fallido[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 2,
+      "method": "POST",
+      "url": "/api/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56430",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "54",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56431
+    }
+    [35mrequestId[39m: 2
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "login_fail"
+    [35memail[39m: "login@example.com"
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 2
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/login"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "email": "login@example.com",
+      "password": "[REDACTED]"
+    }
+    [35mmensaje[39m: "Credenciales inválidas"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 2,
+      "method": "POST",
+      "url": "/api/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56430",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "54",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56431
+    }
+    [35mrequestId[39m: 2
+    [35mres[39m: {
+      "statusCode": 401,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 2,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "8",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "47",
+        "etag": "W/\"2f-WWyHqwTfapFm++HusPQQ/EoT/SA\""
+      }
+    }
+    [35mresponseTime[39m: 88
+[18:54:46] [33mWARN[39m (api-users-render): [36mLogin fallido[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 3,
+      "method": "POST",
+      "url": "/api/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56436",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "54",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56437
+    }
+    [35mrequestId[39m: 3
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "login_fail"
+    [35memail[39m: "noexiste@example.com"
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 3
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/login"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "email": "noexiste@example.com",
+      "password": "[REDACTED]"
+    }
+    [35mmensaje[39m: "Credenciales inválidas"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 3,
+      "method": "POST",
+      "url": "/api/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56436",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "54",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56437
+    }
+    [35mrequestId[39m: 3
+    [35mres[39m: {
+      "statusCode": 401,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 3,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "7",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "47",
+        "etag": "W/\"2f-WWyHqwTfapFm++HusPQQ/EoT/SA\""
+      }
+    }
+    [35mresponseTime[39m: 4
+[18:54:46] [32mINFO[39m (api-users-render): [36mRegistro exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 5,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56434",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56435
+    }
+    [35mrequestId[39m: 5
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "registro"
+    [35musuarioId[39m: "2b78e7d9-1306-4cc3-b1bb-21e61eabc244"
+    [35memail[39m: "test-1784246086750@example.com"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 5,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56434",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56435
+    }
+    [35mrequestId[39m: 5
+    [35mres[39m: {
+      "statusCode": 201,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 5,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "6",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "450",
+        "etag": "W/\"1c2-uTdvLaTkSsLxXdAGcar7nnXD7k4\""
+      }
+    }
+    [35mresponseTime[39m: 106
+[18:54:46] [32mINFO[39m (api-users-render): [36mRegistro exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 6,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56438",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "80",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56439
+    }
+    [35mrequestId[39m: 6
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "registro"
+    [35musuarioId[39m: "0ba3c0cc-be0e-44c2-a842-89fe5ef39b45"
+    [35memail[39m: "usuario-normal@example.com"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 6,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56438",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "80",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56439
+    }
+    [35mrequestId[39m: 6
+    [35mres[39m: {
+      "statusCode": 201,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 6,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "5",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "446",
+        "etag": "W/\"1be-WRmwHDSInjR8AetGt8KEnhJ6EAs\""
+      }
+    }
+    [35mresponseTime[39m: 111
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 7
+    [35mmetodo[39m: "GET"
+    [35murl[39m: "/api/users"
+    [35musuarioId[39m: "0ba3c0cc-be0e-44c2-a842-89fe5ef39b45"
+    [35mrol[39m: "USER"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mmensaje[39m: "No tienes permiso para acceder a este recurso"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 7,
+      "method": "GET",
+      "url": "/api/users",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56444",
+        "accept-encoding": "gzip, deflate",
+        "authorization": "[REDACTED]",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56445
+    }
+    [35mrequestId[39m: 7
+    [35musuario[39m: {
+      "id": "0ba3c0cc-be0e-44c2-a842-89fe5ef39b45",
+      "rol": "USER"
+    }
+    [35mres[39m: {
+      "statusCode": 403,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 7,
+        "ratelimit-policy": "200;w=900",
+        "ratelimit-limit": "200",
+        "ratelimit-remaining": "193",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "69",
+        "etag": "W/\"45-uKINLREdVZAVXdB1Z4AN/BBcWFE\""
+      }
+    }
+    [35mresponseTime[39m: 3
+[18:54:46] [33mWARN[39m (api-users-render): [36mLogin fallido[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 4,
+      "method": "POST",
+      "url": "/api/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56440",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "54",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56441
+    }
+    [35mrequestId[39m: 4
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "login_fail"
+    [35memail[39m: "inactivo@example.com"
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 4
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/login"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "email": "inactivo@example.com",
+      "password": "[REDACTED]"
+    }
+    [35mmensaje[39m: "Credenciales inválidas"
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 4,
+      "method": "POST",
+      "url": "/api/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56440",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "54",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56441
+    }
+    [35mrequestId[39m: 4
+    [35mres[39m: {
+      "statusCode": 401,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 4,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "6",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "47",
+        "etag": "W/\"2f-WWyHqwTfapFm++HusPQQ/EoT/SA\""
+      }
+    }
+    [35mresponseTime[39m: 4
+[18:54:46] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 5
+    [35mmetodo[39m: "POST"
+    [35murl[39m: "/api/auth/login"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mbody[39m: {
+      "email": "test@test.com"
+    }
+    [35mmensaje[39m: "Datos de entrada inválidos"
+    [35mdetalles[39m: [
+      {
+        "expected": "string",
+        "code": "invalid_type",
+        "path": [
+          "password"
+        ],
+        "message": "Invalid input: expected string, received undefined"
+      }
+    ]
+[18:54:46] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 5,
+      "method": "POST",
+      "url": "/api/auth/login",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56442",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "25",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56443
+    }
+    [35mrequestId[39m: 5
+    [35mres[39m: {
+      "statusCode": 400,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 5,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "5",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "191",
+        "etag": "W/\"bf-nmKU7kb8Vdb6uJYlRQbBVR5GRDk\""
+      }
+    }
+    [35mresponseTime[39m: 2
+ [32m✓[39m tests/integration/auth.register.errors.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 935[2mms[22m[39m
+     [33m[2m✓[22m[39m rechaza email duplicado con 409 [33m 758[2mms[22m[39m
+ [32m✓[39m tests/integration/auth.login.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 1235[2mms[22m[39m
+     [33m[2m✓[22m[39m login exitoso devuelve token + usuario sin password [33m 813[2mms[22m[39m
+[18:54:47] [32mINFO[39m (api-users-render): [36mRegistro exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 8,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56446",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56447
+    }
+    [35mrequestId[39m: 8
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "registro"
+    [35musuarioId[39m: "2a67ed10-7f86-4f3d-a3b1-49f24bb093ab"
+    [35memail[39m: "test-1784246086990@example.com"
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 8,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56446",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56447
+    }
+    [35mrequestId[39m: 8
+    [35mres[39m: {
+      "statusCode": 201,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 8,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "4",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "450",
+        "etag": "W/\"1c2-kauzzM+ttgxR6StdXdPP9uNsa8Y\""
+      }
+    }
+    [35mresponseTime[39m: 92
+[18:54:47] [32mINFO[39m (api-users-render): [36mRegistro exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 9,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56448",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "80",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56449
+    }
+    [35mrequestId[39m: 9
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "registro"
+    [35musuarioId[39m: "2c5cab8b-ca8e-406c-996d-07417f7f8e4d"
+    [35memail[39m: "usuario-normal@example.com"
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 9,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56448",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "80",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56449
+    }
+    [35mrequestId[39m: 9
+    [35mres[39m: {
+      "statusCode": 201,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 9,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "3",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "446",
+        "etag": "W/\"1be-YPkecTo8KbYV2fG/MzseGBCldck\""
+      }
+    }
+    [35mresponseTime[39m: 105
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 10,
+      "method": "GET",
+      "url": "/api/users",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56450",
+        "accept-encoding": "gzip, deflate",
+        "authorization": "[REDACTED]",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56451
+    }
+    [35mrequestId[39m: 10
+    [35musuario[39m: {
+      "id": "2a67ed10-7f86-4f3d-a3b1-49f24bb093ab",
+      "rol": "ADMIN"
+    }
+    [35mres[39m: {
+      "statusCode": 200,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 10,
+        "ratelimit-policy": "200;w=900",
+        "ratelimit-limit": "200",
+        "ratelimit-remaining": "190",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "12",
+        "etag": "W/\"c-opt8IRqQX+jniRPcdrhVA9GVq58\""
+      }
+    }
+    [35mresponseTime[39m: 9
+[18:54:47] [32mINFO[39m (api-users-render): [36mRegistro exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 11,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56452",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56453
+    }
+    [35mrequestId[39m: 11
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "registro"
+    [35musuarioId[39m: "76a7dfbe-24c9-4429-aa94-9621c88777fb"
+    [35memail[39m: "test-1784246087220@example.com"
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 11,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56452",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56453
+    }
+    [35mrequestId[39m: 11
+    [35mres[39m: {
+      "statusCode": 201,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 11,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "2",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "450",
+        "etag": "W/\"1c2-VQDP5xlIXZIy0U7V3J5Rm9Sa4yM\""
+      }
+    }
+    [35mresponseTime[39m: 120
+[18:54:47] [32mINFO[39m (api-users-render): [36mRegistro exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 12,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56454",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "80",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56455
+    }
+    [35mrequestId[39m: 12
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "registro"
+    [35musuarioId[39m: "5f60d7a2-d74f-45d8-aee1-47f29bf57850"
+    [35memail[39m: "usuario-normal@example.com"
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 12,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56454",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "80",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56455
+    }
+    [35mrequestId[39m: 12
+    [35mres[39m: {
+      "statusCode": 201,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 12,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "1",
+        "ratelimit-reset": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "446",
+        "etag": "W/\"1be-xAArS+G0oeX+lsepNiKuMPGnEqU\""
+      }
+    }
+    [35mresponseTime[39m: 90
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 13,
+      "method": "GET",
+      "url": "/api/users/5f60d7a2-d74f-45d8-aee1-47f29bf57850",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56456",
+        "accept-encoding": "gzip, deflate",
+        "authorization": "[REDACTED]",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56457
+    }
+    [35mrequestId[39m: 13
+    [35musuario[39m: {
+      "id": "76a7dfbe-24c9-4429-aa94-9621c88777fb",
+      "rol": "ADMIN"
+    }
+    [35mres[39m: {
+      "statusCode": 200,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 13,
+        "ratelimit-policy": "200;w=900",
+        "ratelimit-limit": "200",
+        "ratelimit-remaining": "187",
+        "ratelimit-reset": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "218",
+        "etag": "W/\"da-6GcLpJSatVG+oA34TptyhQpnnV0\""
+      }
+    }
+    [35mresponseTime[39m: 4
+[18:54:47] [32mINFO[39m (api-users-render): [36mRegistro exitoso[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 14,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56458",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56459
+    }
+    [35mrequestId[39m: 14
+    [35mevento[39m: "auth"
+    [35mtipo[39m: "registro"
+    [35musuarioId[39m: "74fe6e53-f20c-4eec-8236-6db3108889f6"
+    [35memail[39m: "test-1784246087452@example.com"
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 14,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56458",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56459
+    }
+    [35mrequestId[39m: 14
+    [35mres[39m: {
+      "statusCode": 201,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 14,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "450",
+        "etag": "W/\"1c2-OzjNPN0Xi6c/ug7zauX6zbtKp3k\""
+      }
+    }
+    [35mresponseTime[39m: 115
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 15,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56460",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "80",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56461
+    }
+    [35mrequestId[39m: 15
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 15,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 16,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56462",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56463
+    }
+    [35mrequestId[39m: 16
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 16,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 0
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 17,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56464",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56465
+    }
+    [35mrequestId[39m: 17
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 17,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 18,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56466",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56467
+    }
+    [35mrequestId[39m: 18
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 18,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 0
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 19,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56468",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56469
+    }
+    [35mrequestId[39m: 19
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 19,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 20,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56470",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56471
+    }
+    [35mrequestId[39m: 20
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 20,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 0
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 21,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56472",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56473
+    }
+    [35mrequestId[39m: 21
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 21,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 8
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 22,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56474",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56475
+    }
+    [35mrequestId[39m: 22
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 22,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 23,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56476",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56477
+    }
+    [35mrequestId[39m: 23
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 23,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 24,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56478",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56479
+    }
+    [35mrequestId[39m: 24
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 24,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 25,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56480",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56481
+    }
+    [35mrequestId[39m: 25
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 25,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 26,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56482",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56483
+    }
+    [35mrequestId[39m: 26
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 26,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 0
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 27,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56484",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56485
+    }
+    [35mrequestId[39m: 27
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 27,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 28,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56486",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56487
+    }
+    [35mrequestId[39m: 28
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 28,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 29,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56488",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56489
+    }
+    [35mrequestId[39m: 29
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 29,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 30,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56490",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56491
+    }
+    [35mrequestId[39m: 30
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 30,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 0
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 31,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56492",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56493
+    }
+    [35mrequestId[39m: 31
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 31,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 32,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56494",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56495
+    }
+    [35mrequestId[39m: 32
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 32,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 33,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56496",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56497
+    }
+    [35mrequestId[39m: 33
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 33,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 0
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 34,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56498",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56499
+    }
+    [35mrequestId[39m: 34
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 34,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 35,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56500",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56501
+    }
+    [35mrequestId[39m: 35
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 35,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:47] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 36,
+      "method": "POST",
+      "url": "/api/auth/register",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56502",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "84",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56503
+    }
+    [35mrequestId[39m: 36
+    [35mres[39m: {
+      "statusCode": 429,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 36,
+        "ratelimit-policy": "10;w=900",
+        "ratelimit-limit": "10",
+        "ratelimit-remaining": "0",
+        "ratelimit-reset": "899",
+        "retry-after": "899",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "68",
+        "etag": "W/\"44-n3n38KRt1hMx+kAu483AKQf0eIY\""
+      }
+    }
+    [35mresponseTime[39m: 1
+ [31m❯[39m tests/integration/users.test.ts [2m([22m[2m27 tests[22m[2m | [22m[31m23 failed[39m[2m)[22m[33m 2015[2mms[22m[39m
+[31m     [31m×[31m ADMIN puede listar usuarios (sin password)[39m[33m 728[2mms[22m[39m
+     [32m✓[39m sin token devuelve 401[32m 255[2mms[22m[39m
+     [32m✓[39m USER devuelve 403[32m 241[2mms[22m[39m
+     [32m✓[39m lista vacía[32m 229[2mms[22m[39m
+     [32m✓[39m ADMIN obtiene usuario existente sin password[32m 231[2mms[22m[39m
+[31m     [31m×[31m UUID inválido devuelve 400[39m[32m 136[2mms[22m[39m
+[31m     [31m×[31m UUID válido pero inexistente devuelve 404[39m[32m 7[2mms[22m[39m
+[31m     [31m×[31m sin token devuelve 401[39m[32m 7[2mms[22m[39m
+[31m     [31m×[31m USER devuelve 403[39m[32m 6[2mms[22m[39m
+[31m     [31m×[31m ADMIN crea usuario con rol ADMIN[39m[32m 12[2mms[22m[39m
+[31m     [31m×[31m ADMIN crea usuario con rol USER[39m[32m 8[2mms[22m[39m
+[31m     [31m×[31m rol por defecto es USER[39m[32m 14[2mms[22m[39m
+[31m     [31m×[31m email duplicado devuelve 409[39m[32m 10[2mms[22m[39m
+[31m     [31m×[31m datos inválidos devuelve 400[39m[32m 8[2mms[22m[39m
+[31m     [31m×[31m sin token devuelve 401[39m[32m 12[2mms[22m[39m
+[31m     [31m×[31m USER devuelve 403[39m[32m 20[2mms[22m[39m
+[31m     [31m×[31m actualiza nombre[39m[32m 14[2mms[22m[39m
+[31m     [31m×[31m actualiza email[39m[32m 8[2mms[22m[39m
+[31m     [31m×[31m actualiza rol[39m[32m 7[2mms[22m[39m
+[31m     [31m×[31m actualiza isActive[39m[32m 5[2mms[22m[39m
+[31m     [31m×[31m body vacío devuelve 400[39m[32m 6[2mms[22m[39m
+[31m     [31m×[31m email duplicado de otro usuario devuelve 409[39m[32m 8[2mms[22m[39m
+[31m     [31m×[31m usuario no encontrado devuelve 404[39m[32m 6[2mms[22m[39m
+[31m     [31m×[31m UUID inválido devuelve 400[39m[32m 6[2mms[22m[39m
+[31m     [31m×[31m elimina usuario existente y devuelve datos sin password[39m[32m 6[2mms[22m[39m
+[31m     [31m×[31m usuario no encontrado devuelve 404[39m[32m 9[2mms[22m[39m
+[31m     [31m×[31m UUID inválido devuelve 400[39m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/integration/auth.register.success.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 756[2mms[22m[39m
+     [33m[2m✓[22m[39m registra un usuario y devuelve token + datos sin password [33m 742[2mms[22m[39m
+[18:54:50] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 1,
+      "method": "GET",
+      "url": "/api/auth/me",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56508",
+        "accept-encoding": "gzip, deflate",
+        "authorization": "[REDACTED]",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56509
+    }
+    [35mrequestId[39m: 1
+    [35musuario[39m: {
+      "id": "f8a38b39-5cf3-493e-90a1-ea29323eb986",
+      "rol": "USER"
+    }
+    [35mres[39m: {
+      "statusCode": 200,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 1,
+        "ratelimit-policy": "200;w=900",
+        "ratelimit-limit": "200",
+        "ratelimit-remaining": "199",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "212",
+        "etag": "W/\"d4-CkqGu+9z2V0lr6A4hagv5hT4zKw\""
+      }
+    }
+    [35mresponseTime[39m: 23
+[18:54:50] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 2
+    [35mmetodo[39m: "GET"
+    [35murl[39m: "/api/auth/me"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mmensaje[39m: "Token de autenticación no proporcionado"
+[18:54:50] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 2,
+      "method": "GET",
+      "url": "/api/auth/me",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56512",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56513
+    }
+    [35mrequestId[39m: 2
+    [35mres[39m: {
+      "statusCode": 401,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 2,
+        "ratelimit-policy": "200;w=900",
+        "ratelimit-limit": "200",
+        "ratelimit-remaining": "198",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "64",
+        "etag": "W/\"40-95kLUDsQIl/EPvKMrotj7AJwWuY\""
+      }
+    }
+    [35mresponseTime[39m: 2
+[18:54:50] [33mWARN[39m (api-users-render): [36mToken inválido o expirado[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 3,
+      "method": "GET",
+      "url": "/api/auth/me",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56514",
+        "accept-encoding": "gzip, deflate",
+        "authorization": "[REDACTED]",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56515
+    }
+    [35mrequestId[39m: 3
+    [35mevento[39m: "seguridad"
+    [35mtipo[39m: "token_invalido"
+    [35mrazon[39m: "TOKEN_INVALIDO"
+    [35mip[39m: "::ffff:127.0.0.1"
+[18:54:50] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 3
+    [35mmetodo[39m: "GET"
+    [35murl[39m: "/api/auth/me"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mmensaje[39m: "Token inválido o expirado"
+[18:54:50] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 3,
+      "method": "GET",
+      "url": "/api/auth/me",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56514",
+        "accept-encoding": "gzip, deflate",
+        "authorization": "[REDACTED]",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56515
+    }
+    [35mrequestId[39m: 3
+    [35mres[39m: {
+      "statusCode": 401,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 3,
+        "ratelimit-policy": "200;w=900",
+        "ratelimit-limit": "200",
+        "ratelimit-remaining": "197",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "50",
+        "etag": "W/\"32-0jZhWyyyw/DkucyxGaW9K2v1cAc\""
+      }
+    }
+    [35mresponseTime[39m: 1
+[18:54:50] [33mWARN[39m (api-users-render): [36mToken inválido o expirado[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 4,
+      "method": "GET",
+      "url": "/api/auth/me",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56516",
+        "accept-encoding": "gzip, deflate",
+        "authorization": "[REDACTED]",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56517
+    }
+    [35mrequestId[39m: 4
+    [35mevento[39m: "seguridad"
+    [35mtipo[39m: "token_invalido"
+    [35mrazon[39m: "TOKEN_EXPIRADO"
+    [35mip[39m: "::ffff:127.0.0.1"
+[18:54:50] [33mWARN[39m (api-users-render): [36mError operacional[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mrequestId[39m: 4
+    [35mmetodo[39m: "GET"
+    [35murl[39m: "/api/auth/me"
+    [35mip[39m: "::ffff:127.0.0.1"
+    [35mmensaje[39m: "Token inválido o expirado"
+[18:54:50] [32mINFO[39m (api-users-render): [36mrequest completed[39m
+    [35menv[39m: "test"
+    [35mservice[39m: "api-users-render"
+    [35mreq[39m: {
+      "id": 4,
+      "method": "GET",
+      "url": "/api/auth/me",
+      "query": {},
+      "params": {},
+      "headers": {
+        "host": "127.0.0.1:56516",
+        "accept-encoding": "gzip, deflate",
+        "authorization": "[REDACTED]",
+        "connection": "close"
+      },
+      "remoteAddress": "::ffff:127.0.0.1",
+      "remotePort": 56517
+    }
+    [35mrequestId[39m: 4
+    [35mres[39m: {
+      "statusCode": 401,
+      "headers": {
+        "cross-origin-opener-policy": "same-origin",
+        "cross-origin-resource-policy": "same-origin",
+        "origin-agent-cluster": "?1",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "access-control-allow-origin": "http://localhost:5173",
+        "vary": "Origin",
+        "x-request-id": 4,
+        "ratelimit-policy": "200;w=900",
+        "ratelimit-limit": "200",
+        "ratelimit-remaining": "196",
+        "ratelimit-reset": "900",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "50",
+        "etag": "W/\"32-0jZhWyyyw/DkucyxGaW9K2v1cAc\""
+      }
+    }
+    [35mresponseTime[39m: 2
+ [32m✓[39m tests/integration/auth.me.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 779[2mms[22m[39m
+     [33m[2m✓[22m[39m usuario autenticado obtiene su perfil sin password [33m 549[2mms[22m[39m
+ [32m✓[39m tests/integration/health.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 35[2mms[22m[39m
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m5 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[31m23 failed[39m[22m[2m | [22m[1m[32m26 passed[39m[22m[90m (49)[39m
+[2m   Start at [22m 18:54:26
+[2m   Duration [22m 23.99s[2m (transform 3.21s, setup 365ms, import 31.78s, tests 5.75s, environment 9ms)[22m
+
+[ELIFECYCLE] Test failed. See above for more details.

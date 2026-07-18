@@ -38,14 +38,14 @@ function validarPasswordNoContieneDatos(
   const passwordLower = datos.password.toLowerCase();
   if (datos.email && passwordLower.includes(datos.email.toLowerCase())) {
     ctx.addIssue({
-      code: "custom",
+      code: 'custom',
       message: 'La contraseña no puede contener el email',
       path: ['password'],
     });
   }
   if (datos.name && passwordLower.includes(datos.name.toLowerCase())) {
     ctx.addIssue({
-      code: "custom",
+      code: 'custom',
       message: 'La contraseña no puede contener el nombre',
       path: ['password'],
     });

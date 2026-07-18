@@ -18,6 +18,9 @@ const esquemaVariablesEntorno = z.object({
   // Se pasa directo a jwt.sign sin parsear a segundos.
   JWT_EXPIRES_IN: z.string().min(1).default('1d'),
   CORS_ORIGIN: z.string().min(1, 'CORS_ORIGIN es obligatorio'),
+  // Nivel de log de Pino: silent, trace, debug, info, warn, error, fatal.
+  // Opcional; por defecto el logger usa 'info' en producción y 'debug' en otros.
+  LOG_LEVEL: z.string().optional(),
 });
 
 const resultado = esquemaVariablesEntorno.safeParse(process.env);

@@ -19,14 +19,14 @@ export const registrarSchema = z
     const passwordLower = datos.password.toLowerCase();
     if (passwordLower.includes(datos.email.toLowerCase())) {
       ctx.addIssue({
-        code: "custom",
+        code: 'custom',
         message: 'La contraseña no puede contener el email',
         path: ['password'],
       });
     }
     if (passwordLower.includes(datos.name.toLowerCase())) {
       ctx.addIssue({
-        code: "custom",
+        code: 'custom',
         message: 'La contraseña no puede contener el nombre',
         path: ['password'],
       });
