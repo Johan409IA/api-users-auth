@@ -1,25 +1,13 @@
-import type {
-  NextFunction,
-  Request,
-  RequestHandler,
-  Response,
-} from 'express';
+import type { NextFunction, Request, RequestHandler, Response } from 'express';
 
 import type { UserModel } from '../../generated/prisma/models/User.js';
 import type { UsuarioAutenticado } from '../../modules/auth/auth.types.js';
-import {
-  ErrorNoAutorizadoError,
-  ErrorProhibidoError,
-} from '../errors/error.js';
+import { ErrorNoAutorizadoError, ErrorProhibidoError } from '../errors/error.js';
 import { verificarToken } from '../utils/jwt.js';
 
 // Middleware de autenticación: valida el JWT enviado en la cabecera
 // `Authorization: Bearer <token>` e inyecta el usuario autenticado en `req.user`.
-export const autenticar: RequestHandler = (
-  req: Request,
-  _res: Response,
-  next: NextFunction,
-) => {
+export const autenticar: RequestHandler = (req: Request, _res: Response, next: NextFunction) => {
   const cabecera = req.headers.authorization;
 
   if (!cabecera?.startsWith('Bearer ')) {
