@@ -36,7 +36,7 @@ Este proyecto busca servir como una base sólida para construir una API REST **m
 - Listar usuarios
 - Obtener usuario por ID
 - Actualizar usuario
-- Desactivar usuario
+- Eliminar usuario
 - Roles (`ADMIN` y `USER`)
 - Validación de datos
 - Manejo centralizado de errores
@@ -151,6 +151,10 @@ prisma/
 tests/
 ├── helpers/
 └── integration/
+
+docs/
+├── api.md
+└── openapi.yaml
 ```
 
 ---
@@ -275,6 +279,11 @@ enum UserRole {
 
 # Endpoints
 
+La documentacion detallada de contratos, ejemplos de request/response y errores esta en:
+
+- [docs/api.md](docs/api.md)
+- [docs/openapi.yaml](docs/openapi.yaml)
+
 ## Auth
 
 | Método | Endpoint | Descripción |
@@ -294,10 +303,11 @@ enum UserRole {
 
 | Método | Endpoint | Descripción |
 |---------|----------|-------------|
+| POST | `/api/users` | Crear usuario |
 | GET | `/api/users` | Listar usuarios |
 | GET | `/api/users/:id` | Obtener usuario |
 | PATCH | `/api/users/:id` | Actualizar usuario |
-| DELETE | `/api/users/:id` | Desactivar usuario |
+| DELETE | `/api/users/:id` | Eliminar usuario |
 
 ---
 
@@ -506,7 +516,7 @@ LOG_LEVEL=info
 - Verificación por email
 - CI/CD
 - Rate limiting
-- OpenAPI / Swagger
+- Swagger UI
 - Observabilidad
 - Seed de administrador
 
