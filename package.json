@@ -25,7 +25,7 @@
   ],
   "author": "Johan",
   "license": "ISC",
-  "types": "module",
+  "type": "module",
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
