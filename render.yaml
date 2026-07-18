@@ -6,7 +6,7 @@ services:
     region: oregon
     repo: https://github.com/Johan409IA/api-users-auth
     autoDeployTrigger: commit
-    buildCommand: pnpm install && pnpm build
+    buildCommand: pnpm install && pnpm prisma:generate && pnpm build
     preDeployCommand: pnpm prisma:deploy && pnpm seed
     startCommand: pnpm start
     envVars:
