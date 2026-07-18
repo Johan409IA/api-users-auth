@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { autenticar } from '../../shared/middlewares/auth.middleware';
-import { limiteAuth } from '../../shared/middlewares/rate-limit';
-import { validar } from '../../shared/middlewares/validate-schema';
-import * as controladorAuth from './auth.controller';
-import { loginSchema, registrarSchema } from './auth.schema';
+import { autenticar } from '../../shared/middlewares/auth.middleware.js';
+import { limiteAuth } from '../../shared/middlewares/rate-limit.js';
+import { validar } from '../../shared/middlewares/validate-schema.js';
+import * as controladorAuth from './auth.controller.js';
+import { loginSchema, registrarSchema } from './auth.schema.js';
 
 export const enrutadorAuth = Router();
 

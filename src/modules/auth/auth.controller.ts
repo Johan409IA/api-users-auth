@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
-import { envoltorioAsync } from '../../shared/middlewares/async-handler';
-import type { LoginInput, RegistroInput } from './auth.schema';
-import * as servicioAuth from './auth.service';
+import { envoltorioAsync } from '../../shared/middlewares/async-handler.js';
+import type { LoginInput, RegistroInput } from './auth.schema.js';
+import * as servicioAuth from './auth.service.js';
 
 export const registrar = envoltorioAsync(async (req: Request, res: Response) => {
   const resultado = await servicioAuth.registrar(req.body as RegistroInput);

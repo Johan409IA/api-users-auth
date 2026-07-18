@@ -1,7 +1,7 @@
-import { app } from './app';
-import { prisma, verificarConexionBaseDeDatos } from './config/database';
-import { env } from './config/env';
-import { logger } from './config/logger';
+import { app } from './app.js';
+import { prisma, verificarConexionBaseDeDatos } from './config/database.js';
+import { env } from './config/env.js';
+import { logger } from './config/logger.js';
 
 async function iniciarServidor(): Promise<void> {
   try {

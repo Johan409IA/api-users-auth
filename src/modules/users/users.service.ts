@@ -2,16 +2,16 @@ import {
   EmailYaRegistradoError,
   ErrorDeValidacion,
   RecursoNoEncontradoError,
-} from '../../shared/errors/error';
-import { mapearAUsuarioDto } from '../../shared/mappers/usuario.mapper';
-import { hashear } from '../../shared/utils/hash';
-import * as repositorioUsuarios from './users.repository';
+} from '../../shared/errors/error.js';
+import { mapearAUsuarioDto } from '../../shared/mappers/usuario.mapper.js';
+import { hashear } from '../../shared/utils/hash.js';
+import * as repositorioUsuarios from './users.repository.js';
 import type {
   ActualizarUsuarioInput,
   CrearUsuarioInput,
   ObtenerUsuarioPorIdInput,
-} from './users.schema';
-import type { UsuarioDto } from './users.types';
+} from './users.schema.js';
+import type { UsuarioDto } from './users.types.js';
 
 const REGEX_UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 

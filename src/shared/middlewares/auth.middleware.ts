@@ -1,9 +1,9 @@
 import type { NextFunction, Request, RequestHandler, Response } from 'express';
 import { JsonWebTokenError, TokenExpiredError } from 'jsonwebtoken';
-import type { UserModel } from '../../generated/prisma/models/User';
-import type { UsuarioAutenticado } from '../../modules/auth/auth.types';
-import { ErrorNoAutorizadoError, ErrorProhibidoError } from '../errors/error';
-import { verificarToken } from '../utils/jwt';
+import type { UserModel } from '../../generated/prisma/models/User.js';
+import type { UsuarioAutenticado } from '../../modules/auth/auth.types.js';
+import { ErrorNoAutorizadoError, ErrorProhibidoError } from '../errors/error.js';
+import { verificarToken } from '../utils/jwt.js';
 
 // Middleware de autenticación: valida el JWT enviado en la cabecera
 // `Authorization: Bearer <token>` e inyecta el usuario autenticado en `req.user`.

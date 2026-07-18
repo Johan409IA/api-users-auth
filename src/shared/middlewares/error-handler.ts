@@ -1,8 +1,8 @@
 import type { NextFunction, Request, Response } from 'express';
 import { ZodError } from 'zod';
-import { env } from '../../config/env';
-import { logger } from '../../config/logger';
-import { AppError, ErrorDeValidacion } from '../errors/error';
+import { env } from '../../config/env.js';
+import { logger } from '../../config/logger.js';
+import { AppError, ErrorDeValidacion } from '../errors/error.js';
 
 // Manejador global de errores. Debe ser el ÚLTIMO middleware registrado.
 // En producción nunca expone el mensaje interno al cliente para no filtrar

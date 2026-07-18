@@ -1,4 +1,4 @@
-import type { UserModel } from '../../generated/prisma/models/User';
+import type { UserModel } from '../../generated/prisma/models/User.js';
 
 // Payload mínimo del JWT. No incluir email/name/isActive:
 // - isActive debe consultarse en BD en cada /me (no hay revocación de tokens).

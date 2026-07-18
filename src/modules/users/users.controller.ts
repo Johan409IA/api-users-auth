@@ -1,12 +1,12 @@
 import type { NextFunction, Request, Response } from 'express';
-import { envoltorioAsync } from '../../shared/middlewares/async-handler';
-import { loggearAuditoria } from '../../shared/utils/auditoria';
+import { envoltorioAsync } from '../../shared/middlewares/async-handler.js';
+import { loggearAuditoria } from '../../shared/utils/auditoria.js';
 import type {
   ActualizarUsuarioInput,
   CrearUsuarioInput,
   ObtenerUsuarioPorIdInput,
-} from './users.schema';
-import * as servicioUsuarios from './users.service';
+} from './users.schema.js';
+import * as servicioUsuarios from './users.service.js';
 
 export const listarUsuarios = envoltorioAsync(async (_req: Request, res: Response) => {
   const usuarios = await servicioUsuarios.listarUsuarios();

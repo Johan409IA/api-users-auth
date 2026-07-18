@@ -4,7 +4,7 @@ import {
   esquemaEmail,
   esquemaNombre,
   esquemaPassword,
-} from '../users/users.schema';
+} from '../users/users.schema.js';
 
 // Registro público: NO se incluye `rol`. El service siempre crea usuarios con
 // rol USER para evitar auto-elevación de privilegios desde un endpoint público.

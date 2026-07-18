@@ -1,1 +1,1 @@
-export { enrutadorAuth as enrutadorModuloAuth } from './auth.routes';
+export { enrutadorAuth as enrutadorModuloAuth } from './auth.routes.js';

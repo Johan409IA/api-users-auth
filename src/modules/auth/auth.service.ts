@@ -1,11 +1,11 @@
-import { ErrorNoAutorizadoError, RecursoNoEncontradoError } from '../../shared/errors/error';
-import { mapearAUsuarioDto } from '../../shared/mappers/usuario.mapper';
-import { comparar } from '../../shared/utils/hash';
-import { firmarToken } from '../../shared/utils/jwt';
-import * as repositorioUsuarios from '../users/users.repository';
-import * as servicioUsuarios from '../users/users.service';
-import type { UsuarioDto } from '../users/users.types';
-import type { LoginInput, RegistroInput } from './auth.schema';
+import { ErrorNoAutorizadoError, RecursoNoEncontradoError } from '../../shared/errors/error.js';
+import { mapearAUsuarioDto } from '../../shared/mappers/usuario.mapper.js';
+import { comparar } from '../../shared/utils/hash.js';
+import { firmarToken } from '../../shared/utils/jwt.js';
+import * as repositorioUsuarios from '../users/users.repository.js';
+import * as servicioUsuarios from '../users/users.service.js';
+import type { UsuarioDto } from '../users/users.types.js';
+import type { LoginInput, RegistroInput } from './auth.schema.js';
 
 export interface RespuestaAuth {
   token: string;

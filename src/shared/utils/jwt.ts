@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import type ms from 'ms';
-import { env } from '../../config/env';
-import type { CargaUtilJwt } from '../../modules/auth/auth.types';
+import { env } from '../../config/env.js';
+import type { CargaUtilJwt } from '../../modules/auth/auth.types.js';
 
 // Análogo a shared/utils/hash: aísla la criptografía (firma/verificación JWT)
 // para que el service y el middleware la consuman sin acoplarse entre sí.

@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { autenticar, requiereRol } from '../../shared/middlewares/auth.middleware';
-import { validar } from '../../shared/middlewares/validate-schema';
-import * as controladorUsuarios from './users.controller';
+import { autenticar, requiereRol } from '../../shared/middlewares/auth.middleware.js';
+import { validar } from '../../shared/middlewares/validate-schema.js';
+import * as controladorUsuarios from './users.controller.js';
 import {
   actualizarUsuarioSchema,
   crearUsuarioSchema,
   obtenerUsuarioPorIdSchema,
-} from './users.schema';
+} from './users.schema.js';
 
 export const enrutadorUsuarios = Router();
 

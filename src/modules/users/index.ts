@@ -1,1 +1,1 @@
-export { enrutadorUsuarios as enrutadorModuloUsuarios } from './users.routes';
+export { enrutadorUsuarios as enrutadorModuloUsuarios } from './users.routes.js';

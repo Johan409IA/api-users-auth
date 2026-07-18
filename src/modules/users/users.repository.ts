@@ -1,6 +1,6 @@
-import { prisma } from '../../config/database';
-import type { UserModel } from '../../generated/prisma/models/User';
-import type { ActualizarUsuarioInput, CrearUsuarioInput } from './users.schema';
+import { prisma } from '../../config/database.js';
+import type { UserModel } from '../../generated/prisma/models/User.js';
+import type { ActualizarUsuarioInput, CrearUsuarioInput } from './users.schema.js';
 
 // Único punto del módulo que toca prisma.user. Centralizarlo permite
 // cambiar la fuente de datos (otra DB, mock, etc.) sin tocar service ni controller.

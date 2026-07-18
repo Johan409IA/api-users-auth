@@ -1,7 +1,7 @@
 import { PrismaPg } from '@prisma/adapter-pg';
-import { PrismaClient } from '../generated/prisma/client';
-import { env } from './env';
-import { logger } from './logger';
+import { PrismaClient } from '../generated/prisma/client.js';
+import { env } from './env.js';
+import { logger } from './logger.js';
 
 // Prisma 7 con engine "client" requiere un driver adapter explícito.
 // PrismaPg envuelve el driver nativo de node-postgres (pg) para PostgreSQL.

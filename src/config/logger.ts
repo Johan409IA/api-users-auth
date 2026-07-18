@@ -1,5 +1,5 @@
 import { pino } from 'pino';
-import { env } from './env';
+import { env } from './env.js';
 
 // Logger centralizado. Usa Pino en produccion (JSON puro, ideal para Render)
 // y agrega legibilidad en desarrollo si pino-pretty esta instalado.

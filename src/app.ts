@@ -4,13 +4,13 @@ import type { NextFunction, Request, Response } from 'express';
 import express from 'express';
 import helmet from 'helmet';
 import { pinoHttp } from 'pino-http';
-import { env } from './config/env';
-import { logger } from './config/logger';
-import { enrutadorModuloAuth } from './modules/auth';
-import { enrutadorModuloUsuarios } from './modules/users';
-import { manejadorDeErrores } from './shared/middlewares/error-handler';
-import { manejarRutaNoEncontrada } from './shared/middlewares/not-found';
-import { limiteGlobal } from './shared/middlewares/rate-limit';
+import { env } from './config/env.js';
+import { logger } from './config/logger.js';
+import { enrutadorModuloAuth } from './modules/auth/index.js';
+import { enrutadorModuloUsuarios } from './modules/users/index.js';
+import { manejadorDeErrores } from './shared/middlewares/error-handler.js';
+import { manejarRutaNoEncontrada } from './shared/middlewares/not-found.js';
+import { limiteGlobal } from './shared/middlewares/rate-limit.js';
 
 export const app = express();
 

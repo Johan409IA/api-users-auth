@@ -1,5 +1,5 @@
-import type { UserModel } from '../../generated/prisma/models/User';
-import type { UsuarioDto } from '../../modules/users/users.types';
+import type { UserModel } from '../../generated/prisma/models/User.js';
+import type { UsuarioDto } from '../../modules/users/users.types.js';
 
 // Regla de seguridad transversal: NUNCA devolver el campo `password` en las
 // respuestas de la API. Centralizar el mapper evita que el filtro se duplique
