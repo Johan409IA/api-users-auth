@@ -4,6 +4,24 @@ import { env } from '../../config/env.js';
 import { logger } from '../../config/logger.js';
 import { AppError, ErrorDeValidacion } from '../errors/error.js';
 
+// Middleware para capturar errores de parsing JSON (body-parser)
+export function manejarErrorJson(
+  error: unknown,
+  req: Request,
+  res: Response,
+  next: NextFunction,
+): void {
+  if (error instanceof SyntaxError && 'status' in error && error.status === 400 && 'body' in error) {
+    const validacion = new ErrorDeValidacion('JSON inválido', [{ message: 'Cuerpo de la petición no es JSON válido', path: ['body'] }]);
+    logger.warn({ requestId: req.id, metodo: req.method, url: req.url, mensaje: validacion.message }, 'Error de parsing JSON');
+    res.status(validacion.statusCode).json({
+      error: { mensaje: validacion.message, detalles: validacion.detalles },
+    });
+    return;
+  }
+  next(error);
+}
+
 // Manejador global de errores. Debe ser el ÚLTIMO middleware registrado.
 // En producción nunca expone el mensaje interno al cliente para no filtrar
 // detalles de implementación (rutas de archivos, queries SQL, etc.).

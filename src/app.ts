@@ -8,7 +8,7 @@ import { env } from './config/env.js';
 import { logger } from './config/logger.js';
 import { enrutadorModuloAuth } from './modules/auth/index.js';
 import { enrutadorModuloUsuarios } from './modules/users/index.js';
-import { manejadorDeErrores } from './shared/middlewares/error-handler.js';
+import { manejadorDeErrores, manejarErrorJson } from './shared/middlewares/error-handler.js';
 import { manejarRutaNoEncontrada } from './shared/middlewares/not-found.js';
 import { limiteGlobal } from './shared/middlewares/rate-limit.js';
 
@@ -68,6 +68,10 @@ app.use('/api/auth', enrutadorModuloAuth);
 // 404 para rutas no reconocidas. Va antes del manejador de errores y no loggea
 // para evitar ruido de bots/escáneres en producción.
 app.use(manejarRutaNoEncontrada);
+
+// Manejar errores de JSON malformado (SyntaxError de body-parser).
+// Debe ir ANTES del manejador global de errores.
+app.use(manejarErrorJson);
 
 // El manejador de errores DEBE ser el último middleware.
 // Captura AppError, ZodError y cualquier error no controlado.
